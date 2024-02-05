@@ -1,11 +1,6 @@
 <html>
   <?php
-		$dbhost = 'REPLACE WITH DB HOST NAME';
-		$dbuser = 'REPLACE WITH REAL USER';
-		$dbpass = 'REPLACE WITH REAL PASSWORD';
-		$dbname = 'blog';
-
-		$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+		$conn = mysqli_connect($_ENV["DB_HOST"], $_ENV["DB_USER"], $_ENV["DB_PWD"], $_ENV["DB_NAME"]);
 
 		if(!$conn) {
 			die('Could not connect: ' . mysqli_connect_error());

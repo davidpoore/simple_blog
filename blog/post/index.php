@@ -10,12 +10,12 @@
 		</nav>
 		<main>
 			<?php
-				$dbhost = 'REPLACE WITH DB HOST NAME';
-				$dbuser = 'REPLACE WITH REAL USER';
-				$dbpass = 'REPLACE WITH REAL PASSWORD';
-				$dbname = 'blog';
+				require_once __DIR__.'/../../vendor/autoload.php';
 
-				$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+				$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../../../');
+				$dotenv->load();
+			
+				$conn = mysqli_connect($_ENV["DB_HOST"], $_ENV["DB_USER"], $_ENV["DB_PWD"], $_ENV["DB_NAME"]);
 				
 				if(!$conn) {
 					die('Could not connect: ' . mysqli_connect_error());
