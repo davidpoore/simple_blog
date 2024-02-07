@@ -24,8 +24,7 @@
 
 			// render current page (not optimized since we always fetch all results)
 			$start_index = ($selected_page - 1) * $page_size;
-			$end_index = $start_index + $page_size;
-			$page_rows = array_slice($posts, $start_index, $end_index);
+			$page_rows = array_slice($posts, $start_index, $page_size);
 
 			foreach ($page_rows as $page_row) {
 			  echo '<a href="blog/post/'.$page_row['id'].'">'.$page_row['title'].'</a><br/>';
