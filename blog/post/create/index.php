@@ -1,9 +1,7 @@
 <html>
-  <head>
-		<title>Triplebatman</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-	</head>
+  <?php include "../../../shared_components/head.php" ?>
 	<body>
+		<?php include "../../../shared_components/header_nav.php" ?>
 		<?php
 			require_once __DIR__.'/../../../vendor/autoload.php';
 
@@ -22,11 +20,15 @@
 				if ($_SERVER['PHP_AUTH_USER'] == $_ENV["CREATE_POST_USER"] && $_SERVER['PHP_AUTH_PW'] == $_ENV["CREATE_POST_PWD"]) {
 					echo '<form action="./create/submit_post.php"  method="post">
 						<label for="title">Post Title:</label>
+						<br/>
 						<input name="title" id="title" type="text">
-
+						<br/>
+						<br/>
 						<label for="body">Post Body:</label>
+						<br/>
 						<input name="body" id="body" type="textarea">
-
+						<br/>
+						<br/>
 						<button type="submit">Submit</button>
 					</form>';
 					if ($success) {
@@ -40,5 +42,6 @@
 				}
 			}
 		?>
+		<?php include "../../../shared_components/footer.php" ?>
 	</body>
 </html>

@@ -1,13 +1,7 @@
 <html>
-  <head>
-		<title>Triplebatman</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-	</head>
+  <?php include "../shared_components/head.php" ?>
 	<body>
-		<nav>
-			<h1><a href="/">Home</a></h1>
-			<h1><a href="/blog">Blog</a></h1>
-		</nav>
+		<?php include "../shared_components/header_nav.php" ?>
 		<?php
 			require_once __DIR__.'/../vendor/autoload.php';
 
@@ -16,5 +10,6 @@
 			
 			include "posts.php"; 
 		?>
+		<?php include "../shared_components/footer.php" ?>
 	</body>
 </html>

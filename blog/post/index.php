@@ -1,13 +1,7 @@
 <html>
-  <head>
-		<title>Triplebatman</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-	</head>
+	<?php include "../../shared_components/head.php" ?>
 	<body>
-		<nav>
-			<h1><a href="/">Home</a></h1>
-			<h1><a href="/blog">Blog</a></h1>
-		</nav>
+		<?php include "../../shared_components/header_nav.php" ?>
 		<main>
 			<?php
 				require_once __DIR__.'/../../vendor/autoload.php';
@@ -30,7 +24,7 @@
 					if (mysqli_num_rows($result) > 0) {
 						$row = mysqli_fetch_assoc($result);
 						echo '<h1>'.$row['title'].'</h1>';
-						echo '<article><p>'.$row['body'].'</p></article>';
+						echo '<article>'.$row['body'].'</article>';
 					} else {
 						echo '<h1>Invalid post id</h1>';
 					}
@@ -39,5 +33,6 @@
 				}
 			?>
 		</main>
+		<?php include "../../shared_components/footer.php" ?>
 	</body>
 </html>

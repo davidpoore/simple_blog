@@ -1,0 +1,58 @@
+body {
+	background-color: #272032;
+	color: #FFF;
+	max-width: 800px;
+	font-family: Tahoma, sans-serif;
+	margin: 0 auto;
+	padding-top: 3em;
+	padding-left: 2em;
+	font-size: 14px;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+nav {
+	padding-bottom: 1em;
+}
+
+nav, nav > * {
+	display: flex;
+	flex: 0 0 auto;
+	justify-content: left;
+	padding-right: 2em;
+}
+
+main {
+	display: flex;
+	flex: 1 0 auto;
+	justify-content: left;
+	flex-direction: column;
+	padding-bottom: 2em;
+}
+
+footer {
+	padding-top: 1em;
+}
+
+a {
+	color: #FFF;
+}
+
+a:visited {
+	color: #b468bd;
+}
+
+input[type=text], input[type=textarea] {
+	width: 100%;
+}
+
+input[type=textarea] {
+	height: 50%;
+}
