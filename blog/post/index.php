@@ -22,13 +22,20 @@
 				}
 
 				$id = basename($_SERVER['REQUEST_URI']);
-				$sql = 'SELECT title, body, created_at FROM posts WHERE id='.$id;
-				$result = mysqli_query($conn, $sql);
 				
-				if (mysqli_num_rows($result) > 0) {
-					$row = mysqli_fetch_assoc($result);
-					echo '<h1>'.$row['title'].'</h1>';
-					echo '<article><p>'.$row['body'].'</p></article>';
+				if (is_numeric($id)) {
+					$sql = 'SELECT title, body, created_at FROM posts WHERE id='.$id;
+					$result = mysqli_query($conn, $sql);
+
+					if (mysqli_num_rows($result) > 0) {
+						$row = mysqli_fetch_assoc($result);
+						echo '<h1>'.$row['title'].'</h1>';
+						echo '<article><p>'.$row['body'].'</p></article>';
+					} else {
+						echo '<h1>Invalid post id</h1>';
+					}
+				} else {
+					echo '<h1>Invalid post id</h1>';
 				}
 			?>
 		</main>
