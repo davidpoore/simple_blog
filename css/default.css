@@ -48,11 +48,3 @@ a {
 a:visited {
 	color: #b468bd;
 }
-
-input[type=text], input[type=textarea] {
-	width: 100%;
-}
-
-input[type=textarea] {
-	height: 50%;
-}

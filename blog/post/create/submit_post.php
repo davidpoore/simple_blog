@@ -6,8 +6,8 @@
 	
 	$conn = mysqli_connect($_ENV["DB_HOST"], $_ENV["DB_USER"], $_ENV["DB_PWD"], $_ENV["DB_NAME"]);
 	
-	$title = $_REQUEST["title"];
-	$body = $_REQUEST["body"];
+	$title = addslashes($_REQUEST["title"]);
+	$body = addslashes($_REQUEST["body"]);
 	
 	$sql = "INSERT INTO posts (title, body, created_at) VALUES('$title', '$body', NOW())";
 	echo $sql;

@@ -21,12 +21,12 @@
 					echo '<form action="./create/submit_post.php"  method="post">
 						<label for="title">Post Title:</label>
 						<br/>
-						<input name="title" id="title" type="text">
+						<input name="title" id="title" type="text" size="60" />
 						<br/>
 						<br/>
 						<label for="body">Post Body:</label>
 						<br/>
-						<input name="body" id="body" type="textarea">
+						<textarea name="body" id="body" cols="60" rows="30"></textarea>
 						<br/>
 						<br/>
 						<button type="submit">Submit</button>
