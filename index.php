@@ -4,7 +4,7 @@
 	<body>
 	  <?php include "shared_components/header_nav.php" ?>
 		<main>
-			<p>the home for all things triplebatman.</p>
+			<p>this is the home page</p>
 		</main>
 		<?php include "shared_components/footer.php" ?>
 	</body>

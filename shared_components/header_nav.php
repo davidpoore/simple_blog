@@ -1,6 +1,6 @@
 <?php
 	echo '<header>
-			<h1>triplebatman</h1>
+			<h1>blog name</h1>
 		</header>
 		<nav>
 			<h2><a href="/">home</a></h2>
