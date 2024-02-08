@@ -35,19 +35,21 @@
 
 		// generate pagination links
 		$num_pages = ceil($total_results / $page_size);
-		echo '<nav>';
-		// go back one page
-		if ($selected_page > 1) {
-			echo '<a href="/blog?page='.($selected_page - 1).'">prev</a>';
+		if ($num_pages > 1) {
+			echo '<nav>';
+			// go back one page
+			if ($selected_page > 1) {
+				echo '<a href="/blog?page='.($selected_page - 1).'">prev</a>';
+			}
+			for ($i = 1; $i <= $num_pages; $i++) {
+				echo '<a href="/blog?page='.$i.'">'.$i.'</a>';
+			}
+			// go forward one page
+			if ($selected_page < $num_pages) {
+				echo '<a href="/blog?page='.($selected_page + 1).'">next</a>';
+			}
+			echo '</nav>';
 		}
-		for ($i = 1; $i <= $num_pages; $i++) {
-			echo '<a href="/blog?page='.$i.'">'.$i.'</a>';
-		}
-		// go forward one page
-		if ($selected_page < $num_pages) {
-			echo '<a href="/blog?page='.($selected_page + 1).'">next</a>';
-		}
-		echo '</nav>';
 	}
 
 	mysqli_close($conn);
