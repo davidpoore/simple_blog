@@ -11,7 +11,6 @@
 			$success = $_GET["success"];
 						
 			if (!isset($_SERVER['PHP_AUTH_USER'])) {
-				echo 'IN HERE';
 				header('WWW-Authenticate: Basic realm="Create Post"');
 				header('HTTP/1.0 401 Unauthorized');
 				echo 'Page not found';
