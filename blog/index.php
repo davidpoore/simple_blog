@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <?php include "../shared_components/head.php" ?>
 	<body>

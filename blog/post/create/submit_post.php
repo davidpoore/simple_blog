@@ -10,14 +10,12 @@
 	$body = addslashes($_REQUEST["body"]);
 	
 	$sql = "INSERT INTO posts (title, body, created_at) VALUES('$title', '$body', NOW())";
-	echo $sql;
 	
-	$success = false;
 	if(mysqli_query($conn, $sql)){
-		header('Location: /blog/post/create?success=true');
+		echo '<meta http-equiv="refresh" content="0; URL=/blog/post/create?success=true">';
 		exit();
 	} else{
-		header('Location: /blog/post/create?success=false');
+		echo '<meta http-equiv="refresh" content="0; URL=/blog/post/create?success=false">';
 		exit();
 	}
 	 

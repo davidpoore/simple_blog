@@ -28,7 +28,7 @@
 		$page_rows = array_slice($posts, $start_index, $page_size);
 
 		foreach ($page_rows as $page_row) {
-			echo '<li><a href="blog/post/'.$page_row['id'].'">'.$page_row['title'].'</a></li>';
+			echo '<li>['.$page_row['created_at'].'] <a href="/blog/post?id='.$page_row['id'].'">'.$page_row['title'].'</a></li>';
 		}
 		
 		echo '</ul></main>';

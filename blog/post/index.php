@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<?php include "../../shared_components/head.php" ?>
 	<body>
@@ -15,7 +16,7 @@
 					die('Could not connect: ' . mysqli_connect_error());
 				}
 
-				$id = basename($_SERVER['REQUEST_URI']);
+				$id = $_GET['id'];
 				
 				if (is_numeric($id)) {
 					$sql = 'SELECT title, body, created_at FROM posts WHERE id='.$id;
